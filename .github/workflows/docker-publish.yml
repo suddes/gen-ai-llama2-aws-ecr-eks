@@ -17,7 +17,6 @@ jobs:
       with:
         aws-region: ${{ secrets.AWS_REGION }} ## Later after build failure
         role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        role-session-name: GitHubActions
 
     - name: Login to Amazon ECR
       id: login-ecr
