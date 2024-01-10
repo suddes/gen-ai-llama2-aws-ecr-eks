@@ -16,9 +16,8 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-region: ${{ secrets.AWS_REGION }} ## Later after build failure
-        #role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-        role-to-assume: arn:aws:iam::642066724242:role/GitHubAccess_Assume_Role
-
+        role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+        
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
